@@ -1,0 +1,30 @@
+<app-headeradmin (sidebarToggle)="drawer.toggle()" />
+<mat-drawer-container autosize >
+  <mat-drawer #drawer mode="side" class="shadow-lg!" [opened]="isSidebarOpen">
+    <div class="bg-white h-screen">
+      <mat-nav-list role="list">
+        <mat-list-item 
+          ><a routerLink="/admin" class="menu">
+            
+            <span>Dashboard</span>
+          </a></mat-list-item
+        >
+        <mat-list-item 
+          ><a routerLink="/admin/projetos" class="menu"
+            ><span>Projetos</span></a
+          ></mat-list-item
+        >
+        <mat-list-item 
+          ><a routerLink="/admin/orcamentos" class="menu"
+            ><span>Orçamentos</span></a
+          ></mat-list-item
+        >
+      </mat-nav-list>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="h-screen p-8">
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
